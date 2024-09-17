@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,15 @@ builder.Services.AddAuthentication(
         options.ExpireTimeSpan = TimeSpan.FromDays(1);
         options.LoginPath = "/Index/Index";
         options.AccessDeniedPath = "/Index/Index";
+    })
+    .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+    {
+        options.ClientId = "169056277389-alt2a4bn7gket4hpnart6ttdjuh7201v.apps.googleusercontent.com";
+        options.ClientSecret = "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";
     });
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Dn7F7cZzUdM=",
+  "dgSpecHash": "ZVchLSnpvUs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Sahil Shaikh\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\SchoolManagementWebApp.csproj",
+  "projectFilePath": "C:\\SchoolmanagementUpdated\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\SchoolManagementWebApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\8.0.8\\microsoft.aspnetcore.authentication.google.8.0.8.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

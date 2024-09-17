@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SchoolManagementWebApp.Models;
@@ -128,5 +129,56 @@ namespace SchoolManagementWebApp.Controllers
 
             
         }
+
+        public IActionResult GoogleLogin()
+        {
+            var redirectUrl = Url.Action("GoogleResponse", "Index");
+            var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+
+        public IActionResult GoogleResponse()
+        {
+            var result = HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme).Result;
+            if (result?.Principal != null)
+            {
+                var claims = result.Principal.Identities.FirstOrDefault()?.Claims;
+                var email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+                var name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+
+               
+                if (!string.IsNullOrEmpty(email))
+                {
+                    
+                    var u = new User
+                    {
+                        UserId = email,
+                        Urole = "Student"
+                    };
+
+                    var identity = new ClaimsIdentity(new[]
+                    {
+                new Claim(ClaimTypes.Name, u.UserId),
+                new Claim(ClaimTypes.Role, u.Urole)
+            }, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    var principal = new ClaimsPrincipal(identity);
+                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                    if (u.Urole == "SystemAdmin")
+                    {
+                        return RedirectToAction("AdminDashboard", "SystemAdmin");
+                    }
+                    else
+                    {
+                        HttpContext.Session.SetString("Student", u.UserId);
+                        return RedirectToAction("StudentDashboard", "Student");
+                    }
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }
