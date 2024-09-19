@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -127,18 +127,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentDashboard.cshtml",
-              "DocumentMoniker": "C:\\SchoolmanagementUpdated\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
-              "RelativeDocumentMoniker": "SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
-              "ToolTip": "C:\\SchoolmanagementUpdated\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
-              "RelativeToolTip": "SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-17T11:14:01.413Z"
             },
             {
               "$type": "Document",
@@ -212,6 +200,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T10:21:01.37Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentDashboard.cshtml",
+              "DocumentMoniker": "C:\\SchoolmanagementUpdated\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
+              "RelativeDocumentMoniker": "SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
+              "ToolTip": "C:\\SchoolmanagementUpdated\\SchoolManagementSystemUsingDotNetCoreAndWebAPI\\SchoolManagementWebApp\\SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
+              "RelativeToolTip": "SchoolManagementWebApp\\Views\\Student\\StudentDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-17T11:14:01.413Z"
             },
             {
               "$type": "Document",
